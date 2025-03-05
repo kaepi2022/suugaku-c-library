@@ -154,7 +154,7 @@ namespace suugaku{
     }
     
     /*
-    @brief 階上(n!)を計算してその値を返します。
+    @brief 階乗(n!)を計算してその値を返します。
     */
     long long fact(int x){
         long long kaijyou = 1;
