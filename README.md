@@ -40,7 +40,7 @@ g++ -o main main.cpp
 
 ---
 
-## 関数の説明
+## 関数の説明(Verison 3.14から)
 
 ### 1. `triangle` - 三角関数関連
 
