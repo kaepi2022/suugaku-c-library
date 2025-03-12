@@ -52,7 +52,7 @@ g++ -o main main.cpp
 | `asin_ratio(a, c)` | `a/c` から `sin` の角度を求める | `suugaku::triangle::asin_ratio(1, 2);`   |
 | `acos_ratio(b, c)` | `b/c` から `cos` の角度を求める | `suugaku::triangle::acos_ratio(1, 2);`   |
 | `atan_ratio(a, b)` | `a/b` から `tan` の角度を求める | `suugaku::triangle::atan_ratio(1, 1);`   |
-| `coslaw(a, b,C)` | 余弦定理で特定の辺の長さを求める。※`C`は角度 です。 | `suugaku::triangle::coslaw(1, 1,90); //1.414....`   |
+| `coslaw(a, b,C)` | 余弦定理で三角形の特定の辺の長さを求める。※`C`は角度 です。 | `suugaku::triangle::coslaw(1, 1,90); //1.414....`   |
 
 ---
 
