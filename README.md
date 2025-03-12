@@ -40,7 +40,7 @@ g++ -o main main.cpp
 
 ---
 
-## 関数の説明(Verison 3.14から)
+## 関数の説明(Verison 4から)
 
 ### 1. `triangle` - 三角関数関連
 
@@ -52,6 +52,17 @@ g++ -o main main.cpp
 | `asin_ratio(a, c)` | `a/c` から `sin` の角度を求める | `suugaku::triangle::asin_ratio(1, 2);`   |
 | `acos_ratio(b, c)` | `b/c` から `cos` の角度を求める | `suugaku::triangle::acos_ratio(1, 2);`   |
 | `atan_ratio(a, b)` | `a/b` から `tan` の角度を求める | `suugaku::triangle::atan_ratio(1, 1);`   |
+| `coslaw(a, b,C)` | 余弦定理で特定の辺の長さを求める。※`C`は角度 です。 | `suugaku::triangle::coslaw(1, 1,90); //1.414....`   |
+
+---
+
+### 1.5. `triangle::pythagoras` - 三平方関連
+
+| 関数名                | 説明                     | 例                                        |
+| ------------------ | ---------------------- | ---------------------------------------- |
+| `strtri_a(b,c)`       | 直角三角形のaの長さを返す      | `suugaku::triangle::pythagoras::strtri_a(1.73,2); // 1` |
+| `strtri_b(a,c)`       | 直角三角形のbの長さを返す      | `suugaku::triangle::pythagoras::strtri_b(1,2); // 1.73...` |
+| `strtri_c(a,b)`       | 直角三角形のcの長さを返す      | `suugaku::triangle::pythagoras::strtri_c(1,1); // 1.414....` |
 
 ---
 
@@ -59,11 +70,12 @@ g++ -o main main.cpp
 
 | 関数名            | 説明                    | 例                                         |
 | -------------- | --------------------- | ----------------------------------------- |
-| `is_even(x)`   | `x` が偶数なら `true` を返す  | `suugaku::nature::is_even(4); // true`    |
-| `is_odd(x)`    | `x` が奇数なら `true` を返す  | `suugaku::nature::is_odd(5); // true`     |
-| `is_prime(x)`  | `x` が素数なら `true` を返す  | `suugaku::nature::is_prime(7); // true`   |
-| `is_square(x)` | `x` が平方数なら `true` を返す | `suugaku::nature::is_square(16); // true` |
-| `is_cube(x)`   | `x` が立方数なら `true` を返す | `suugaku::nature::is_cube(27); // true`   |
+| `is_even(n)`   | `n` が偶数なら `true` を返す  | `suugaku::nature::is_even(4); // true`    |
+| `is_odd(n)`    | `n` が奇数なら `true` を返す  | `suugaku::nature::is_odd(5); // true`     |
+| `is_prime(n)`  | `n` が素数なら `true` を返す  | `suugaku::nature::is_prime(7); // true`   |
+| `is_square(n)` | `n` が平方数なら `true` を返す | `suugaku::nature::is_square(16); // true` |
+| `is_cube(n)`   | `n` が立方数なら `true` を返す | `suugaku::nature::is_cube(27); // true`   |
+| `is_fibo(n)`   | `n` がフィボナッチ数なら `true` を返す | `suugaku::nature::is_fibo(8); // true`   |
 
 ---
 
@@ -80,14 +92,13 @@ g++ -o main main.cpp
 
 | 関数名             | 説明              | 例                                          |
 | --------------- | --------------- | ------------------------------------------ |
-| `fact(x)`       | `x!` (階乗) を計算   | `suugaku::fact(5); // 120`                 |
-| `prime_fact(x)` | `x` 以下の素数の階乗を計算 | `suugaku::prime_fact(7); // 210 (2*3*5*7)` |
+| `fact(n)`       | `n!` (階乗) を計算   | `suugaku::fact(5); // 120`                 |
+| `prime_fact(n)` | `n#` 以下の素数の階乗を計算 | `suugaku::prime_fact(7); // 210 (2*3*5*7)` |
 | `to_radian(x)`  | `x` 度をラジアンに変換   | `suugaku::to_radian(180); // 3.1415...`    |
 | `pi()`          | 40 桁以上の円周率を返す   | `suugaku::pi();`                           |
 
 ---
 
 ## ライセンス
-商業利用するときはC++のソースコードにこのgithubリンク貼っといてねぇ～！
 MIT License に基づき自由に使用できます。
 
